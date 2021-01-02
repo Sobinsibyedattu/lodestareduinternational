@@ -16,7 +16,8 @@
     <link href="images/favicon.png" rel="shortcut icon" type="image/png">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css">    
+	<link rel="stylesheet" href="swiper/swipe.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
@@ -40,6 +41,30 @@
 .header-top-area .header-top-right-part .social-links::after {
     width: 0px !important;
 }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
     </style>
 </head>
 
@@ -227,7 +252,27 @@
     </header>
     <!-- header End -->
     <!-- Home Slider Start -->
-    <section class="banner-section">
+
+
+    <section>
+    <!-- Swiper -->
+	    <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/slides/start.jpg"></div>
+                <div class="swiper-slide"><img src="images/slides/uk.jpg"></div>
+                <div class="swiper-slide"><img src="images/slides/canada.jpg"></div>
+                <div class="swiper-slide"><img src="images/slides/last.jpg"></div>
+            </div>
+		<!-- Add Pagination -->
+		    <div class="swiper-pagination"></div>
+             <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+	    </div>
+    </section>
+
+    
+    <section class="banner-section" style="display:none;">
         <div class="home-carousel owl-theme owl-carousel">
             <div class="slide-item">
                 <div class="image-layer" data-background="images/slides/start.jpg"></div>
@@ -1087,6 +1132,17 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-core-plugins.js"></script>
     <script src="js/main.js"></script>
+    <!-- Swiper JS -->
+	<script src="swiper/swipe.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+	</script>
     <script>
         var app = angular.module('myApp', []);
         app.controller('formCtrl', function($scope, $timeout) {

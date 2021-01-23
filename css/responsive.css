@@ -1,3 +1,6 @@
+.spl-font{
+	opacity: 0.09;
+}
 /* XL Device :1200px */
 @media (min-width: 1200px) and (max-width: 1500px) {}
 
@@ -196,6 +199,9 @@
 }
 
 @media (max-width: 768px) {
+	.spl-font{
+		font-size: 100px !important;
+	}
 	.request-a-call-back-form {
 		margin-left: 0;
 	}
@@ -290,12 +296,19 @@
 @media (max-width: 600px) {}
 
 @media (max-width: 576px) {
+	.spl-font{
+		font-size: 70px !important;
+	}
 	.navbar-brand {
 		margin: 0 auto;
 	}
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+	.spl-font{
+		font-size: 50px !important;
+	}
+}
 
 @media (max-width: 425px) {
 	h2 {

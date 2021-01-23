@@ -22,6 +22,10 @@
 }
 
 @media (max-width: 1024px) {
+	.page-title-section {
+		background-size: auto 100% !important;
+		background-position: center !important;
+	}
 	.home-carousel .content-box {
 		padding: 0 30px;
 	}
@@ -87,6 +91,10 @@
 	}
 }
 @media (max-width: 991px) {
+	.page-title-section {
+		background-size: auto 100% !important;
+		background-position: center !important;
+	}
 	.logo img {
 		height: 38px;
 	}
@@ -307,6 +315,10 @@
 @media (max-width: 480px) {
 	.spl-font{
 		font-size: 50px !important;
+	}
+	.page-title-section {
+		background-size: auto 100% !important;
+		background-position: center !important;
 	}
 }
 

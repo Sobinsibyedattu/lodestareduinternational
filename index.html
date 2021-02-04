@@ -35,7 +35,7 @@
 
         .swiper-button-next,
         .swiper-button-prev {
-            background-color: #ffffff;
+            background-color: #3d3d3d14;
             width: 50px;
             height: 50px;
             -webkit-animation: white-shadow .8s infinite, red-shadow 1.5s infinite;
@@ -47,6 +47,10 @@
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: small !important;
+        }
+
+        .slider-img {
+            width: 100% !important;
         }
     </style>
 </head>
@@ -257,10 +261,40 @@
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img style="width: 100%;" src="images/slides/start_new.jpg"></div>
-                <div class="swiper-slide"><img src="images/slides/uk_new.jpg"></div>
-                <div class="swiper-slide"><img src="images/slides/canada_new.jpg"></div>
-                <div class="swiper-slide"><img src="images/slides/last_new.jpg"></div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width:768px)" srcset="images/slides/start_new.jpg">
+                        <source media="(min-width:465px)" srcset="images/slides/start.jpg">
+                        <img class="slider-img" src="images/slides/start.jpg" alt="Slider 1" style="width:auto;">
+                    </picture>
+                    <!--                       
+                    <img class="slider-img" src="images/slides/start.jpg" srcset="images/slides/start_new.jpg 800w ,images/slides/start.jpg 100w"
+                     sizes="(max-width: 600px) 480px, 800px"> -->
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width:768px)" srcset="images/slides/uk_new.jpg">
+                        <source media="(min-width:465px)" srcset="images/slides/uk_mob.jpg">
+                        <img class="slider-img" src="images/slides/uk_new.jpg" alt="Slider 1" style="width:auto;">
+                    </picture>
+                    <!-- <img class="slider-img" src="images/slides/uk_new.jpg"> -->
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width:768px)" srcset="images/slides/canada_new.jpg">
+                        <source media="(min-width:465px)" srcset="images/slides/canada.jpg">
+                        <img class="slider-img" src="images/slides/canada_new.jpg" alt="Slider 1" style="width:auto;">
+                    </picture>
+                    <!-- <img class="slider-img" src="images/slides/canada_new.jpg"> -->
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width:768px)" srcset="images/slides/last_new.jpg">
+                        <source media="(min-width:465px)" srcset="images/slides/last.jpg">
+                        <img class="slider-img" src="images/slides/last_new.jpg" alt="Slider 1" style="width:auto;">
+                    </picture>
+                    <!-- <img class="slider-img" src="images/slides/last_new.jpg"> -->
+                </div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
